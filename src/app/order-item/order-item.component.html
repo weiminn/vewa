@@ -1,0 +1,22 @@
+<div *ngIf="item.status == 'Pending' || item.status == 'Received'">
+  <div class="row top-buffer">
+
+    <div class="col-sm-3" style="text-align:center">
+        {{item.tableNumber}}
+    </div>
+    <div class="col-sm-4">
+        {{item.order}}
+    </div>
+    <div class="col-sm-1" style="text-align:center">
+        {{item.quantity}}
+    </div>
+    <div class="col-sm-3" style="text-align:right">
+        <input *ngIf="item.status === 'Pending'" type="button" class="btn btn-secondary" value="Receive" (click)="receive()">
+        <input *ngIf="item.status === 'Received'" type="button" class="btn btn-success" value="Complete" (click)="complete()">
+    </div>
+
+  </div>
+
+  <hr>
+</div>
+  

@@ -1,0 +1,34 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand page-scroll" href="#">ABC's</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="#">Main Course</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+    <div class="padding-lg">
+      <div class="row">
+        <div class="col-sm-3" style="text-align:center">
+            Table Number
+        </div>
+        <div class="col-sm-4">
+            Order
+        </div>
+        <div class="col-sm-1" style="text-align:center">
+            Quantity
+        </div>
+        <div class="col-sm-3" style="text-align:right">
+            Status
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <app-order-item *ngFor="let order of orderList |async" [order]="order"></app-order-item>
+      
+</div>
